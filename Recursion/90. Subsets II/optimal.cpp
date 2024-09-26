@@ -22,7 +22,22 @@ class Solution {
       }
 };
 
-int main(){
-    
+int main() {
+    vector<int> nums = {1, 2, 2};
+    Solution solution;
+    vector<vector<int>> result = solution.subsetsWithDup(nums);
+
+    cout << "The unique subsets are:" << endl;
+    for (const auto& subset : result) {
+        cout << "[";
+        for (int i = 0; i < subset.size(); i++) {
+            cout << subset[i];
+            if (i < subset.size() - 1) {
+                cout << ", ";
+            }
+        }
+        cout << "]" << endl;
+    }
+
     return 0;
 }
